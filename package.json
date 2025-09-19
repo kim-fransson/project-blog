@@ -22,8 +22,10 @@
     "new-component": "5.0.2",
     "next": "15.4.0-canary.88",
     "next-mdx-remote": "5.0.0",
+    "npm": "11.6.0",
     "react": "19.1.1",
     "react-dom": "19.1.1",
-    "react-feather": "2.0.10"
+    "react-feather": "2.0.10",
+    "rss": "1.2.2"
   }
 }

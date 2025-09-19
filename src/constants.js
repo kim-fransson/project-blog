@@ -1,4 +1,7 @@
 export const BLOG_TITLE = "Bits & Bytes";
+export const BLOG_DESCRIPTION = "A wonderful blog about JavaScript";
+export const BLOG_URL = "project-blog-inky-beta.vercel.app";
+export const BLOG_OWNER = "Kim Fransson";
 export const COLOR_THEME_COOKIE_NAME = "color-theme";
 
 export const LIGHT_COLORS = {

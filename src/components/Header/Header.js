@@ -7,6 +7,7 @@ import VisuallyHidden from "@/components/VisuallyHidden";
 
 import styles from "./Header.module.css";
 import DarkLightToggle from "../DarkLightToggle";
+import Link from "next/link";
 
 async function Header({ theme, className, ...delegated }) {
   return (
@@ -17,7 +18,7 @@ async function Header({ theme, className, ...delegated }) {
       <Logo />
 
       <div className={styles.actions}>
-        <button className={styles.action}>
+        <Link href='/rss.xml' className={styles.action}>
           <Rss
             size='1.5rem'
             style={{
@@ -26,7 +27,7 @@ async function Header({ theme, className, ...delegated }) {
             }}
           />
           <VisuallyHidden>View RSS feed</VisuallyHidden>
-        </button>
+        </Link>
 
         <DarkLightToggle
           className={styles.action}
