@@ -13,7 +13,7 @@ export async function GET(_request) {
   const rssFeed = new RSS({
     title: BLOG_TITLE,
     description: BLOG_DESCRIPTION,
-    feed_url: `${BLOG_URL}/rss.xml}`,
+    feed_url: `${BLOG_URL}/rss.xml`,
     site_url: BLOG_URL,
     image_url: `${BLOG_URL}/favicon.ico`,
     managingEditor: BLOG_OWNER,
