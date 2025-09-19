@@ -1,3 +1,4 @@
+// There is a hydration error bug (solved in 15.4.0-canary.88) but still present in version 15.5.3
 import React from "react";
 
 import Slider from "@/components/Slider";
