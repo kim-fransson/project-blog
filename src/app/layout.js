@@ -2,13 +2,19 @@ import React from "react";
 import { Work_Sans, Spline_Sans_Mono } from "next/font/google";
 import clsx from "clsx";
 
-import { LIGHT_TOKENS, DARK_TOKENS, BLOG_TITLE } from "@/constants";
+import {
+  LIGHT_TOKENS,
+  DARK_TOKENS,
+  BLOG_TITLE,
+  COLOR_THEME_COOKIE_NAME,
+} from "@/constants";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import RespectMotionPreferences from "@/components/RespectMotionPreferences";
 
 import "./styles.css";
+import { cookies } from "next/headers";
 
 const mainFont = Work_Sans({
   subsets: ["latin"],
@@ -28,9 +34,9 @@ export const metadata = {
   description: "A wonderful blog about JavaScript",
 };
 
-function RootLayout({ children }) {
-  // TODO: Dynamic theme depending on user preference
-  const theme = "light";
+async function RootLayout({ children }) {
+  const savedTheme = (await cookies()).get(COLOR_THEME_COOKIE_NAME);
+  const theme = savedTheme?.value || "light";
 
   return (
     <RespectMotionPreferences>
